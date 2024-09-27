@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: buckpal
+#  profiles:
+#    active: batch-create-fake-account
+  error:
+    include-binding-errors: always
+    whitelabel:
+      enabled: false
+  messages:
+    encoding: UTF-8
+    fallback-to-system-locale: false
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/buckpal_test
+    username: app
+    password: app!
+    driver-class-name: org.postgresql.Driver
+  mvc:
+    problemdetails:
+      enabled: true
+
+common:
+  locale: ja-JP
+  timezone: Asia/Tokyo
+
+buckpal:
+  send-money:
+    max-transfer-threshold: 200000
+    baseline-date: 2024-07-02

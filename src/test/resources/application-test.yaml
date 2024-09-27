@@ -1,0 +1,18 @@
+#spring:
+#  datasource:
+#    url: jdbc:postgresql://localhost:5432/buckpal_test
+#    username: app
+#    password:
+#    driver-class-name: org.postgresql.Driver
+#  jpa:
+#    hibernate:
+#      ddl-auto: none # スキーマを自動生成しないようにする
+#  test:
+#    database:
+#      replace: none # デフォルトのH2データベースを無効にする
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
